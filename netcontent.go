@@ -1,4 +1,4 @@
-package netcontent
+package mtype
 
 const (
 	// Application Content Types
