@@ -28,14 +28,14 @@ import (
 )
 
 func main() {
-	fmt.Println(netcontent.ApplicationJson)
+	fmt.Println(mtype.ApplicationJson)
 	http.HandleFunc("/health", Health)
 	log.Fatal(http.ListenAndServe("localhost:8080", nil))
 }
 
 
 func Health(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", netcontent.ApplicationJson)
+	w.Header().Set("Content-Type", mtype.ApplicationJson)
 	io.WriteString(w, `{"alive":"true"}`)
 }
 
