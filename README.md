@@ -20,24 +20,20 @@ Include in application like so:
 package main
 
 import (
- "io"
- "net/http"
- "fmt"
- 
- "github.com/hunter32292/go-mtype"
+	"io"
+	"log"
+	"net/http"
+
+	"github.com/hunter32292/go-mtype"
 )
 
 func main() {
-	fmt.Println(mtype.ApplicationJson)
 	http.HandleFunc("/health", Health)
 	log.Fatal(http.ListenAndServe("localhost:8080", nil))
 }
-
 
 func Health(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", mtype.ApplicationJson)
 	io.WriteString(w, `{"alive":"true"}`)
 }
-
-
 ```
