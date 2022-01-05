@@ -1,5 +1,5 @@
-# Netcontent
-List of const content types, because I keep forgetting them
+# Mtype = Media Type
+List of const content types, because I keep forgetting them. Just use autocomplete with the package and you can stop dealing with missed chars in your content types or forgetting what content types you can use.
 
 ## Notes
 
